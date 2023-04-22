@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(190, 227, 169);
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#entete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(50, 73, 36);
+    color: #ffffff;
+    z-index: 9999;
+}
+
+#logo {
+    width: 40%;
+    font-size: 1.5em;
+    margin: 5px 0 0 0 0;
+}
+
+#rubrique {
+    width: 50%;
+}
+
+#rubrique ul {
+    list-style-type: none;
+    text-align: right;
+    font-size: 1.5em;
+    margin: 0 0 0 5%;
+}
+
+#rubrique li {
+    display: inline;
+}
+
+#rubrique a {
+    text-decoration: none;
+}
+
+#rubrique a:link{
+    color: #ffffff;
+}
+
+#rubrique a:visited{
+    color: #ffffff;
+}
+
+#rubrique a:hover{
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(50, 73, 36);
+}
+
+#mur {
+    margin-top: 60px;
+    color: #ffffff;
+}
+
+.main {
+    height: 75vh;
+}
+
+#pied {
+    text-align: center;
+    font-style: italic;
+    font-size: 100%;
+    padding: 10px;
+    background-color: rgb(50, 73, 36);
+    color: #ffffff;
+    clear: both;
+}
+
+#reseaux-sociaux {
+    margin: 25px 0px;
+}
+
+#reseaux-sociaux p {
+    padding-bottom: 5px;
+}
+
+#reseaux-sociaux a {
+    text-decoration: none;
+}
+
+#pied img {
+    height: 25px;
+    width: auto;
+}
+
+@media (max-width: 1005px) {
+    #entete {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(50, 73, 36);
+        font-size: 50%;
+        color: #ffffff;
+        z-index: 0;
+    }
+
+    #rubrique {
+        width: 100%;
+    }
+
+    #pied {
+        text-align: center;
+        font-style: italic;
+        font-size: 75%;
+        padding: 10px;
+        background-color: rgb(50, 73, 36);
+        color: #ffffff;
+        clear: both;
+    }
+}

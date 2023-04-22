@@ -1,0 +1,13 @@
+<div id="sous-prjets" class="presentation">
+    <div class="carte">
+        <h1>Modele d'afrique</h1>
+        <img class="modele" src="image/img1.jpg" alt="modele">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
+             Aperiam, repudiandae quo dolores neque facere ipsa eos <br>
+             voluptatum fugiat, facilis est dolor aut officiis adipisci<br>
+              non a suscipit hic fugit doloremque. 
+              <a href="templates/projet1/jeuneIA.html">Lire la suite</a>
+        </p>
+    </div>
+</div>
