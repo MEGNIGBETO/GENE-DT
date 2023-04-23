@@ -66,9 +66,14 @@ body {
 }
 
 .main {
-    padding-top: 10%;
-    font-size: larger;
-    text-align: center;
+    font-size: 15px;
+    text-align: justify;
+    width: 75%;
+    margin-left: 12%;
+}
+
+.main h1 {
+    font-size: 15px;
 }
 
 #pied {
