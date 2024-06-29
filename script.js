@@ -1,57 +1,65 @@
-$(init);
+// Code JavaScript pour la fonctionnalité de la plateforme éducative
 
-function init() {
+//Gestion du menu de navigation en responsive
+const menuHamburger = document.querySelector(".menu-hamburger")
+const navLinks = document.querySelector(".nav-links")
+ 
+menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+})
+
+// Fonction pour afficher la section spécifiée et masquer les autres sections
+function afficherSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+        if (section.id === sectionId) {
+            section.removeAttribute('hidden');
+        } else {
+            section.setAttribute('hidden', 'true');
+        }
+    });
+}
+
+// Fonction de gestion de la navigation
+function naviguer(e) {
+    e.preventDefault();
+    const lien = e.target;
+    const sectionId = lien.getAttribute('href').substring(1); // Enlève le caractère '#' du lien
+
+    afficherSection(sectionId);
+    document.querySelector(".nav-links").classList.toggle('mobile-menu');
     
-    //initialisation
-    $(accueil);
-    $(projets);
-    $(propos);
+}
 
-    $("#accueil").show();
-    $("#projets").hide();
-    $("#propos").hide();
+// Écouteurs d'événements pour les liens de navigation
+document.querySelectorAll('nav a').forEach(lien => {
+    lien.addEventListener('click', naviguer);
+});
 
-    //bouton de menu
-    $("#btnAccueil").click(btnAccueil);
-    $("#btnProjets").click(btnProjets);
-    $("#btnPropos").click(btnPropos);
+// Afficher la section Accueil par défaut
+afficherSection('accueil');
 
-} //fin init
 
-////////////////////////////////////
-/*Javascript pour les boutons menu*/
-////////////////////////////////////
 
-function btnAccueil() {
-    $("#accueil").show();
-    $("#projets").hide();
-    $("#propos").hide();
-} //fin btnAccueil
 
-function btnProjets() {
-    $("#accueil").hide();
-    $("#projets").show();
-    $("#propos").hide();
-} //fin btnProjets
 
-function btnPropos() {
-    $("#accueil").hide();
-    $("#projets").hide();
-    $("#propos").show();
-} //fin btnPropos
 
-///////////////////////////
-/*Chargement des contenus*/
-///////////////////////////
+/*
+$(document).ready(function() {
+// Compteur des likes et dislikes
+let likesCount = 100;
+let dislikesCount = 10;
 
-function accueil() {
-    $("#accueil").load("templates/accueil.txt");
-} //fin accueil
+$(".like-button").click(function() {
+    likesCount++;
+    $(".likes-count").text(likesCount + " Likes");
+});
 
-function projets() {
-    $("#projets").load("templates/projets.txt");
-} //fin projets
+$(".dislike-button").click(function() {
+    dislikesCount++;
+    $(".dislikes-count").text(dislikesCount + " Dislikes");
+});
+});
 
-function propos() {
-    $("#propos").load("templates/propos.txt");
-} //fin propos
+*/

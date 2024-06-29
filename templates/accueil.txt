@@ -1,7 +1,0 @@
-
-<p>Bienvenu(e) à GENE-DT! <br> Fier(e) de participer au développement des territoires</p>
-
-<!--<form action="" method="post">
-    <input type="text" name="mail">
-    <input type="submit" name="Envoyer" id="envoieForm">
-</form>-->

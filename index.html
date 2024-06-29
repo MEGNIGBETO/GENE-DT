@@ -1,48 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style_body.css">
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <title>GENE-DT</title>
+    <meta name="description" content="Plateforme numérique de l'ONG GEN-DT">
+    <meta name="robots" content="index, follow">
+    <title>Plateforme ONG GEN-DT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="STATIC/styleAnimLogo.css">
+    <link rel="stylesheet" href="STATIC/volontaire.css">
+    <script type="text/javascript" src="STATIC/jquery-3.6.0.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
 </head>
 <body>
-    <div id="entete">
-        <div id="logo">GENE-DT</div>
-        <div id="rubrique">
+    <!-- En-tête de la page -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <span class="logo">ONG GEN-DT</span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <!-- <li><a href="#projet">Nos projets</a></li>
+                    <li><a href="#videotheque">Médiathèque</a></li> -->
+                    <li><a href="#volontaire">Nos volontaires</a></li>
+                    <li><a href="#apropos">A propos</a></li>
+                </ul>
+            </div>
+            <img src="images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+    </header>
+
+    <!-- Section Accueil (par défaut affichée) -->
+    <section id="accueil">
+
+        <!-- Animation accueil -->
+         <div class="logo-anim-container">
+            <span class="logo-part" id="part1">Gen</span>
+            <span class="logo-part" id="part2">-</span>
+            <span class="logo-part" id="part3">DT</span>
+         </div>
+        
+        <!-- Espace Citations -->
+        <div class="citations">
+            <!-- <h3>Citations inspirantes</h3> -->
+            <blockquote>
+                <p id="citation-place"></p>
+            </blockquote>
+        </div>
+
+        <!-- Espace Actualités -->
+        <div class="actualites">
+            <h3>Actualités</h3>
             <ul>
-                <li id="btnAccueil"><a>Accueil</a></li>
-                <li id="btnProjets"><a>Projets</a></li>
-                <li id="btnPropos"><a>A propos</a></li>
+                <li>
+                    Projet de sensibilisation à l'intelligence artificielle <strong>AI-evangelism</strong>
+                </li>
             </ul>
+            <!-- Ajoutez plus d'actualités ici -->
         </div>
-    </div>
-    <div id="mur">
-        <div id="accueil" class="main">
+        
+        <!-- Espace Informations -->
+        <div class="informations">
+            <h3>Informations</h3>
+            <ul>
+                <li>
+                    Recrutement de volontaires, sur notre projet <strong>AI-evangelism</strong>. 
+                    Contactez-nous via whatsapp <a href="https://chat.whatsapp.com/...">ici</a> 
+                    pour plus d'information.
+                </li>
+            </ul>
+            <!-- Ajoutez plus de contenu d'informations ici -->
         </div>
-        <div id="projets" class="main-projets">
+    </section>
+
+    <!-- Section Vidéothèque -->
+    <section id="projet" hidden>
+        <h2>Nos projets</h2>
+        <div class="projet-page">
+            <!-- Les détails de capsules video seront générés ici -->   
         </div>
-        <div id="propos" class="main">
+    </section>
+
+    <!-- Section Vidéothèque -->
+    <section id="videotheque" hidden>
+        <h2>Vidéothèque</h2>
+        <div class="video-library">
+            <!-- Les détails de capsules video seront générés ici -->   
         </div>
-    </div>
-    <div id="pied">
-        <div id="reseaux-sociaux">
-            <p>Suivez-nous!</p>
-            <a target="_blank" href="#">
-                <img src="image/logo-facebook.png" alt="logo-facebook">
-            </a>
-            <a target="_blank" href="#">
-                <img src="image/LinkedIn-Symbole.png" alt="logo-linkedIn">
-            </a>
-            <a target="_blank" href="#">
-                <img src="image/logo-github.png" alt="logo-github">
-            </a>
+    </section>
+
+    <section  id="volontaire" hidden>
+        <div class="equipe">
+
         </div>
-        Copyright &copy; Avril 2023 GENE-DT. Tous droits réservés
-    </div>
+    </section>
+
+    <!-- Section A propos -->
+    <section id="apropos" hidden>
+        <div class="apropos">
+
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>Contactez-nous : <a href="https://chat.whatsapp.com/...">Whatsapp</a></p>
+        <p>© 2023 Plateforme ONG GEN-DT. Tous droits réservés.</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="STATIC/video.js"></script>
+    <script type="text/javascript" src="STATIC/projet.js"></script>
+    <script type="text/javascript" src="STATIC/quote.js"></script>
+    <script type="text/javascript" src="STATIC/volontaire.js"></script>
+    <script type="text/javascript" src="STATIC/apropos.js"></script>
 </body>
 </html>
